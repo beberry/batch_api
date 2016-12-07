@@ -6,6 +6,7 @@ module BatchApi
     # Public: create a new ErrorWrapper from an error object.
     def initialize(error)
       @error = error
+      binding.pry
       @status_code = error.status_code if error.respond_to?(:status_code)
     end
 
